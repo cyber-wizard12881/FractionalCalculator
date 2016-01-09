@@ -67,6 +67,7 @@
     <Compile Include="DataAccess\OperationsTests.cs" />
     <Compile Include="Helpers\FractionsHelperTests.cs" />
     <Compile Include="Helpers\OperationsServiceHelperTests.cs" />
+    <Compile Include="Mappers\FractionMapperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\OperationsServiceTests.cs" />
   </ItemGroup>
