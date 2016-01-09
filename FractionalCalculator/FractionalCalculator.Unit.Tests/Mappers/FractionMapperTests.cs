@@ -26,23 +26,23 @@ namespace FractionalCalculator.Unit.Tests.Mappers
         [Test]
         public void ShouldMapFractionModelToFraction()
         {
-            var _domain = FractionMapper.Map(_model);
+            var domain = FractionMapper.Map(_model);
 
-            Assert.IsNotNull(_domain);
+            Assert.IsNotNull(domain);
 
-            Assert.AreEqual(_model.Numerator, _domain.Numerator);
-            Assert.AreEqual(_model.Denominator, _domain.Denominator);
+            Assert.AreEqual(_model.Numerator, domain.Numerator);
+            Assert.AreEqual(_model.Denominator, domain.Denominator);
         }
 
         [Test]
         public void ShouldMapFractionToFractionModel()
         {
-            var _model = FractionMapper.Map(_domain);
+            var model = FractionMapper.Map(_domain);
 
-            Assert.IsNotNull(_model);
+            Assert.IsNotNull(model);
 
-            Assert.AreEqual(_domain.Numerator, _model.Numerator);
-            Assert.AreEqual(_domain.Denominator, _model.Denominator);
+            Assert.AreEqual(_domain.Numerator, model.Numerator);
+            Assert.AreEqual(_domain.Denominator, model.Denominator);
         }
     }
 }
