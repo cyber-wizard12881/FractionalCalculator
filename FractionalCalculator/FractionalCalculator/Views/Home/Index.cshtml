@@ -1,24 +1,33 @@
-﻿<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
+﻿@model FractionalCalculator.Models.ExpressionModel
+<div class="jumbotron">
+    <h1>Fractional Calculator</h1>
+    <p class="lead">Fractional Calculator is an application that allows you to do arithmetic operations on Fractions.</p>
     <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 <div class="row">
     <div class="col-md-4">
         <h2>Getting started</h2>
-        <p>ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
-        a broad range of clients, including browsers and mobile devices. ASP.NET Web API
-        is an ideal platform for building RESTful applications on the .NET Framework.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+        <p>Fractional Calculator is built using Web API. The Restful service runs over http & gives you easy access to the operations as Addition, Subtraction, Multiplication, Division & Power(Exponentiation)</p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
+        <h2>Built using DDD Principles</h2>
+        <p>The Fractional Calculator has been built using Domain Driven Design principles. It has layers like Domain, Data Access, Services, Web API & MVC (UI).</p>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
+        <h2>Easy to Use</h2>
+        <p>You can easily type in any Fractional Arithmetic Expression & Calculate its result by just clicking a button. Doesn't get any easier than that.</p>
     </div>
 </div>
+
+<div>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        <label style="color: darkblue">Enter Fractional Expression: </label>
+        @Html.TextBoxFor(m => m.Expression)
+        <input type="submit" class="btn btn-info" value="Calculate"/>
+        <br/>
+        <label style="color: darkred">Result: </label>
+        @Html.TextBoxFor(m => m.Result)
+    }
+</div>
+
