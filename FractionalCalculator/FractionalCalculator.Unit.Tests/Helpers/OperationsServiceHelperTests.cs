@@ -72,5 +72,15 @@ namespace FractionalCalculator.Unit.Tests.Helpers
             Assert.AreEqual(-3, normalizedFraction.Numerator);
             Assert.AreEqual(19, normalizedFraction.Denominator);
         }
+
+        [Test]
+        public void ShouldReturnZeroWhenNormalizingZeroFraction()
+        {
+            var normalizedFraction = _operationsServiceHelper.Normalize(new Fraction(0, 19));
+
+            Assert.IsNotNull(normalizedFraction);
+            Assert.AreEqual(0, normalizedFraction.Numerator);
+            Assert.AreEqual(1, normalizedFraction.Denominator);
+        }
     }
 }

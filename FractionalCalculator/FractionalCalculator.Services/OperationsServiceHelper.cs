@@ -16,6 +16,10 @@ namespace FractionalCalculator.Services
 
         public Fraction Normalize(Fraction fraction)
         {
+            if (fraction.Numerator == 0 || fraction.Denominator == 0)
+            {
+                return new Fraction(0,1);
+            }
             var gcd = GCD(Math.Abs(fraction.Numerator), Math.Abs(fraction.Denominator));
             var numerator = Math.Abs(fraction.Numerator) / gcd;
             var denominator = Math.Abs(fraction.Denominator) / gcd;

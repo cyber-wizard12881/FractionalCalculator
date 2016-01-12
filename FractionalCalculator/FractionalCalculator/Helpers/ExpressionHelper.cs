@@ -90,6 +90,8 @@ namespace FractionalCalculator.Helpers
 
         private string FractionToString(FractionResponse response)
         {
+            if (response.Fraction.Denominator == 1)
+                return $"{response.Fraction.Numerator}";
             return $"{response.Fraction.Numerator}/{response.Fraction.Denominator}";
         }
     }
