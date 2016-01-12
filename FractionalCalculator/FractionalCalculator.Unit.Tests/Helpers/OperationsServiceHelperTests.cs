@@ -52,5 +52,25 @@ namespace FractionalCalculator.Unit.Tests.Helpers
             Assert.AreEqual(3, normalizedFraction.Numerator);
             Assert.AreEqual(19, normalizedFraction.Denominator);
         }
+
+        [Test]
+        public void ShouldReturnNormalizedNegativeFraction()
+        {
+            var normalizedFraction = _operationsServiceHelper.Normalize(new Fraction(-3, 36));
+
+            Assert.IsNotNull(normalizedFraction);
+            Assert.AreEqual(-1, normalizedFraction.Numerator);
+            Assert.AreEqual(12, normalizedFraction.Denominator);
+        }
+
+        [Test]
+        public void ShouldReturnNonNormalizableNegativeFraction()
+        {
+            var normalizedFraction = _operationsServiceHelper.Normalize(new Fraction(-3, 19));
+
+            Assert.IsNotNull(normalizedFraction);
+            Assert.AreEqual(-3, normalizedFraction.Numerator);
+            Assert.AreEqual(19, normalizedFraction.Denominator);
+        }
     }
 }
