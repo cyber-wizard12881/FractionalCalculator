@@ -20,7 +20,7 @@
 </div>
 
 <div>
-    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    @using (Html.BeginForm("Index", "Home", new { ExpressionModel = Model}, FormMethod.Post))
     {
         <label style="color: darkblue">Enter Fractional Expression: </label>
         @Html.TextBoxFor(m => m.Expression)

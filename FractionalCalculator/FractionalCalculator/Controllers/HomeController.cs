@@ -28,7 +28,8 @@ namespace FractionalCalculator.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
-            return View();
+            ExpressionModel model = new ExpressionModel();
+            return View(model);
         }
 
         [System.Web.Mvc.HttpPost]
@@ -42,6 +43,7 @@ namespace FractionalCalculator.Controllers
             {
                 model.Result = exception.Message;
             }
+            ModelState.Clear();
             return View(model);
         }
     }
