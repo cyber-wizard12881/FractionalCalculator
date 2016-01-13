@@ -84,6 +84,18 @@ namespace FractionalCalculator.Unit.Tests.Helpers
         }
 
         [Test]
+        public void ShouldReturnIntegerWhenOperatingOnFractions()
+        {
+            var fractionResponse = new FractionResponse { Fraction = new FractionModel { Numerator = 2, Denominator = 1 } };
+            _client.Expect(c => c.Multiply(2, 3, 3, 1)).Return(fractionResponse);
+
+            var result = _helper.ParseExpression("2/3 * 3");
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual("2", result);
+        }
+
+        [Test]
         [ExpectedException(typeof(Exception))]
         public void ShouldThrowException()
         {
