@@ -208,7 +208,7 @@ Example
 }
 ```
 
-Power two Fractions
+Power a Fraction
 ==============
 This method powers (exponentiates) a Fraction. (1/2 ^ 3 = 1/8)
 
