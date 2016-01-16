@@ -2,10 +2,12 @@ FractionalCalculator
 ================
 Is an MVC & Web API based application that helps you with Fractional Arithmetic.
 ------------
+```
 Getting Started: Open up the solution (FractionalCalculator.sln) in Visual Studio 2015. Hit the Run Button after selecting either Debug
 or Release mode.
 
 The home page of this MVC app. opens up. On the landing page enter a Fractional Expression with the supported operations (+, -, *, /, ^) giving spaces between the operators & operands. Hit the Calculate button & the response is returned in the Result Text Box.
+```
 
 **Urls**
 ```
